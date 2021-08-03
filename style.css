@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(41, 41, 70);
+}
+.squares li{
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255,255,255,0.15);
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    animation: up 2s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes up {
+    from{
+        transform: translateY(0) ;
+    }
+    to{
+        transform: translateY(-1000px) rotate(700deg);
+    }
+}

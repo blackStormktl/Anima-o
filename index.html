@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <ul class="squares">
+        <li></li>
+    </ul>
+
+<script>
+    const ulSquare = document.querySelector(".squares")
+
+    for(let i = 0 ;  i < 20 ; i++){
+        const li = document.createElement("li");
+
+
+        const random =  (min , max)=> Math.random()*(max  - min)+min
+        /*faz o randomico de 0 a 1*/
+        const size =Math.floor( random(120, 10));
+
+        /*posicionamento diferente em tela*/
+
+        const position = Math.floor(random(1 , 99));
+        li.style.width=`${size}px`;
+        li.style.height=`${size}px`;
+        li.style.bottom = `-${size}px`;
+
+        const delay = random(5,0.1)
+
+        li.style.animationDelay = `${delay}s`
+        const duration = random(24,20)
+        li.style.animationDirection=`${duration}`
+        li.style.left =  `${position}%`
+        ulSquare.appendChild(li)
+
+    }
+</script>
+
+</body>
+</html>
+
+
